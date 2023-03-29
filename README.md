@@ -4,7 +4,9 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Web Developer
 -------------
 
-• I embarked on the path of a web developer in 2023 and started with HTML. After I mastered the basics of HTML, I moved on to CSS to learn how to style my web pages. • I then learned JavaScript to add dynamic features and interaction to my pages. • Next I explored one of the popular frameworks like Vue. Using this framework, I learned how to work with its main components and functionality.
+• I embarked on the path of a web developer in 2023 and started with HTML. After I mastered the basics of HTML, I moved on to CSS to learn how to style my web pages. 
+• Then I learned JavaScript to add dynamic features and interaction to my pages. 
+• Next I explored one of the popular frameworks like Vue. Using this framework, I learned how to work with its main components and functionality.
 
 * 🌍  I'm based in Russia, Armavir
 * ✉️  You can contact me at [arutyunyan-98@mil.ru](mailto:arutyunyan-98@mil.ru)
