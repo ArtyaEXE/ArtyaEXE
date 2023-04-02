@@ -10,7 +10,7 @@ Web Developer
 • Next I explored one of the popular frameworks like Vue. Using this framework, I learned how to work with its main components and functionality.
 
 * 🌍  I'm based in Russia, Armavir
-* ✉️  You can contact me at [arutyunyan-98@mil.ru](mailto:arutyunyan-98@mail.ru)
+* ✉️  You can contact me at [arutyunyan-98@mail.ru](mailto:arutyunyan-98@mail.ru)
 * 🧠  I'm learning Node.js and consolidate my knowledge in new projects
 
 ### Skills
