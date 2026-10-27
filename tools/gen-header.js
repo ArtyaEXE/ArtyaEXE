@@ -1,4 +1,4 @@
-// Generates the profile's SVGs (assets/header.svg, assets/cards/*.svg): node tools/gen-svg.js .
+// Generates the profile's animated header, assets/header.svg: node tools/gen-svg.js .
 const fs = require('fs')
 const path = require('path')
 const OUT = process.argv[2]
@@ -98,47 +98,5 @@ ${term}
 </svg>`
 }
 
-// ---------- project cards ----------
-function card({ title, kind, lines, chips, accent, live }) {
-  const W = 560, H = 190
-  let cx = 28
-  const chipSvg = chips.map(c => {
-    const w = c.length * 7.6 + 22
-    const s = `<rect x="${cx}" y="${H - 50}" width="${w}" height="26" rx="13" fill="${accent}" fill-opacity=".12" stroke="${accent}" stroke-opacity=".45"/><text x="${cx + w / 2}" y="${H - 32}" text-anchor="middle" class="mono" font-size="12.5" fill="#e6edf3">${esc(c)}</text>`
-    cx += w + 8
-    return s
-  }).join('')
-  const desc = lines.map((l, i) => `<text x="28" y="${92 + i * 22}" class="sans" font-size="15.5" fill="#9da7b3">${esc(l)}</text>`).join('')
-  const badge = live ? `<g><circle cx="${W - 82}" cy="38" r="4.5" fill="#3fb950"><animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/></circle><text x="${W - 70}" y="43" class="sans" font-size="13.5" font-weight="600" fill="#3fb950">live</text></g>` : ''
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}: ${esc(lines.join(' '))}">
-<defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1319"/><stop offset="1" stop-color="#161b22"/></linearGradient>
-  <radialGradient id="glow" cx="1" cy="0" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".22"/><stop offset=".6" stop-color="${accent}" stop-opacity="0"/></radialGradient>
-  <style>.sans{font-family:${SANS}}.mono{font-family:${MONO}}</style>
-</defs>
-<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="16" fill="url(#bg)" stroke="#30363d"/>
-<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="16" fill="url(#glow)"/>
-<rect x="0" y="26" width="4" height="${H - 52}" rx="2" fill="${accent}"/>
-<text x="28" y="34" class="mono" font-size="12.5" letter-spacing="1.5" fill="${accent}">${esc(kind.toUpperCase())}</text>
-<text x="28" y="62" class="sans" font-size="23" font-weight="700" fill="#f0f6fc">${esc(title)}</text>
-${badge}
-${desc}
-${chipSvg}
-</svg>`
-}
-
-const CARDS = {
-  'dinazzz-photo': { title: 'Photographer portfolio', kind: 'client site', accent: '#f778ba', live: true,
-    lines: ['A full-screen gallery for a real photographer:', 'categories, swipe navigation, fully responsive.'], chips: ['HTML', 'CSS', 'JavaScript', 'Swiper'] },
-  technosaurus: { title: 'Technosaurus', kind: 'online store', accent: '#3fb950', live: true,
-    lines: ['A shop SPA: catalog with filters and pages,', 'product cards, a cart and checkout.'], chips: ['Vue 3', 'Vue Router', 'Vuex', 'Axios'] },
-  'Home-Bookkeeping': { title: 'Home Bookkeeping', kind: 'web app', accent: '#58a6ff', live: true,
-    lines: ['Income and expenses with sign-up, categories,', 'budget planning and charts; EN and RU.'], chips: ['Vue 2', 'Vuex', 'Firebase', 'Chart.js'] },
-  'telegram-neural-bot': { title: 'Voice ChatGPT bot', kind: 'telegram bot', accent: '#39c5cf', live: false,
-    lines: ['Talk to ChatGPT in Telegram by voice: speech is', 'transcribed with Whisper, the dialog keeps context.'], chips: ['Node', 'Telegraf', 'OpenAI', 'ffmpeg'] },
-}
-
-fs.mkdirSync(path.join(OUT, 'assets/cards'), { recursive: true })
 fs.writeFileSync(path.join(OUT, 'assets/header.svg'), header())
-for (const [name, c] of Object.entries(CARDS)) fs.writeFileSync(path.join(OUT, `assets/cards/${name}.svg`), card(c))
 console.log('ok')

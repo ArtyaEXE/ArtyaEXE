@@ -35,24 +35,13 @@ Thirteen open-source mods for Claude Code on Windows. They stop commands that wo
 /plugin install hud --marketplace ArtyaEXE/claude-mods   # or any of the thirteen
 ```
 
-### ✦ Selected work
+### 🧰 What I ship with
 
 <p align="center">
-  <a href="https://artyaexe.github.io/dinazzz-photo/"><img src="assets/cards/dinazzz-photo.svg" alt="Photographer portfolio — a client site" width="49%"></a>
-  <a href="https://artyaexe.github.io/technosaurus/"><img src="assets/cards/technosaurus.svg" alt="Technosaurus — an online store on Vue 3" width="49%"></a>
-  <a href="https://money-checker-vue.web.app/"><img src="assets/cards/Home-Bookkeeping.svg" alt="Home Bookkeeping — a Vue and Firebase web app" width="49%"></a>
-  <a href="https://github.com/ArtyaEXE/telegram-neural-bot"><img src="assets/cards/telegram-neural-bot.svg" alt="Voice ChatGPT bot for Telegram" width="49%"></a>
+  <img src="assets/tech.svg" alt="What I ship with: Svelte, JavaScript, Vue and TypeScript by lines I wrote, and the tools I use most, across 24 projects and 2,000+ commits on GitHub and GitLab" width="100%">
 </p>
 
-<p align="center"><sub>Cards open the live site · code: <a href="https://github.com/ArtyaEXE/dinazzz-photo">dinazzz-photo</a> · <a href="https://github.com/ArtyaEXE/technosaurus">technosaurus</a> · <a href="https://github.com/ArtyaEXE/Home-Bookkeeping">Home-Bookkeeping</a> · <a href="https://github.com/ArtyaEXE/telegram-neural-bot">telegram-neural-bot</a></sub></p>
-
-### 🧰 Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,svelte,vue,astro,nodejs,express,postgres,mongodb,firebase,html,css,vite,docker,git,githubactions,vscode&perline=9&theme=dark" alt="TypeScript, JavaScript, Svelte, Vue, Astro, Node.js, Express, PostgreSQL, MongoDB, Firebase, HTML, CSS, Vite, Docker, Git, GitHub Actions, VS Code">
-</p>
-
-<p align="center"><sub>Plus SvelteKit, Drizzle, Meteor, Telegraf and the Telegram Bot API, the OpenAI and Claude APIs, and Claude Code’s plugin engine.</sub></p>
+<p align="center"><sub>Most of my commercial work lives in private GitLab repositories: this card counts it without naming it.</sub></p>
 
 ### 🐍 Activity
 
